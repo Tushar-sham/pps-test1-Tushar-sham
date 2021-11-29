@@ -1,0 +1,27 @@
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word".
+(gdb) r
+Starting program:  
+warning: Error disabling address space randomization: Operation not permitted
+No executable file specified.
+Use the "file" or "exec-file" command.
+(gdb) s
+The program is not being run.
+(gdb) p
+The history is empty.
+(gdb) n
+The program is not being run.
+(gdb) continue
+The program is not being run.
+(gdb) b amin
+No symbol table is loaded.  Use the "file" command.
+Make breakpoint pending on future shared library load? (y or [n]) r
+Please answer y or [n].
+Make breakpoint pending on future shared library load? (y or [n]) 
