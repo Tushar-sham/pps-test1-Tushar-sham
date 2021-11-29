@@ -1,0 +1,197 @@
+~/pps-test1-Tushar-sham-1$ gcc -g p1original.c 
+~/pps-test1-Tushar-sham-1$ 
+db~/pps-test1-Tushar-sham-1$ gdb a.out^C
+~/pps-test1-Tushar-sham-1$ 
+~/pps-test1-Tushar-sham-1$ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x722: file p1original.c, line 4.
+(gdb) r
+Starting program: /home/runner/pps-test1-Tushar-sham-1/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p1original.c:4
+4   {
+(gdb) n
+7     printf("enter a number: ");
+(gdb) n
+8     scanf("%d",&a);
+(gdb) n
+enter a number: 1
+9     printf("enter a number: ");
+(gdb) n
+10    scanf("%d", &b);
+(gdb) quiit
+Undefined command: "quiit".  Try "help".
+(gdb) quit
+A debugging session is active.
+
+    Inferior 1 [process 113] will be killed.
+
+Quit anyway? (y or n) y
+~/pps-test1-Tushar-sham-1$ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x722: file p1original.c, line 4.
+(gdb) r
+Starting program: /home/runner/pps-test1-Tushar-sham-1/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p1original.c:4
+4   {
+(gdb) n
+7     printf("enter a number: ");
+(gdb) n
+8     scanf("%d",&a);
+(gdb) n
+enter a number: quit^C
+Program received signal SIGINT, Interrupt.
+0x00007facd033d151 in __GI___libc_read (fd=0, buf=0x564ac6c8d670, 
+    nbytes=1024) at ../sysdeps/unix/sysv/linux/read.c:27
+27  ../sysdeps/unix/sysv/linux/read.c: No such file or directory.
+(gdb) quit
+A debugging session is active.
+
+    Inferior 1 [process 119] will be killed.
+
+Quit anyway? (y or n) y
+~/pps-test1-Tushar-sham-1$ gcc -g p3original.c 
+p3original.c:11:6: error: conflicting types for ‘input’
+ void input(int a, int b, int c )
+      ^~~~~
+p3original.c:2:7: note: previous definition of ‘input’ was here
+  void input(int *a,int *b)
+       ^~~~~
+p3original.c: In function ‘main’:
+p3original.c:19:9: warning: passing argument 1 of ‘input’ makes integer from pointer without a cast [-Wint-conversion]
+   input(&x,&y);
+         ^
+p3original.c:11:6: note: expected ‘int’ but argument is of type ‘int *’
+ void input(int a, int b, int c )
+      ^~~~~
+p3original.c:19:12: warning: passing argument 2 of ‘input’ makes integer from pointer without a cast [-Wint-conversion]
+   input(&x,&y);
+            ^
+p3original.c:11:6: note: expected ‘int’ but argument is of type ‘int *’
+ void input(int a, int b, int c )
+      ^~~~~
+p3original.c:19:3: error: too few arguments to function ‘input’
+   input(&x,&y);
+   ^~~~~
+p3original.c:11:6: note: declared here
+ void input(int a, int b, int c )
+      ^~~~~
+p3original.c:21:3: warning: implicit declaration of function ‘output’; did you mean ‘input’? [-Wimplicit-function-declaration]
+   output(x,y,z);
+   ^~~~~~
+   input
+~/pps-test1-Tushar-sham-1$ 
+~/pps-test1-Tushar-sham-1$ 
+~/pps-test1-Tushar-sham-1$ gcc -g p3original.c 
+~/pps-test1-Tushar-sham-1$ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x7fc: file p3original.c, line 17.
+(gdb) r
+Starting program: /home/runner/pps-test1-Tushar-sham-1/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p3original.c:17
+17  {
+(gdb) n
+19    input(&x,&y);
+(gdb) s
+input (a=0x7ffff941d16c, b=0x7ffff941d170) at p3original.c:4
+4     printf("enter two numbers\n");
+(gdb) n
+enter two numbers
+5     scanf("%d%d",a ,b );
+(gdb) n
+1 2
+6   }
+(gdb) p *a
+$1 = 1
+(gdb) p *b
+$2 = 2
+(gdb) n
+main () at p3original.c:20
+20    sum(x,y,&z);
+(gdb) p x 
+$3 = 1
+(gdb) p y
+$4 = 2
+(gdb) s
+sum (a=1, b=2, sum=0x7ffff941d174) at p3original.c:9
+9     *sum=a+b;
+(gdb) n
+10  }
+(gdb) p *sum
+$5 = 3
+(gdb) 
+$6 = 3
+(gdb) n
+main () at p3original.c:21
+21    output(x,y,z);
+(gdb) p z
+$7 = 3
+(gdb) s
+output (a=1, b=2, c=3) at p3original.c:13
+13   printf("sum of %d+%d is%d\n",a,b,c);
+(gdb) n
+sum of 1+2 is3
+15  }
+(gdb) n
+main () at p3original.c:22
+22    return 0;
+(gdb) c
+Continuing.
+[Inferior 1 (process 185) exited normally]
+(gdb) l
+17  {
+18    int x,y,z;
+19    input(&x,&y);
+20    sum(x,y,&z);
+21    output(x,y,z);
+22    return 0;
