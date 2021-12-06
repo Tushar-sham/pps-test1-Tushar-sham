@@ -1,13 +1,9 @@
-#include<stdio.h>
+#include <stdio.h>
 int main()
-
 {
-  int a;
-  int b;
-  printf("enter a number: ");
-  scanf("%d",&a);
-  printf("enter a number: ");
-  scanf("%d", &b);
-  printf("result: %d", a+b);
-  return 0;
+    char name [30];
+    printf("enter your name: ");
+    scanf("%s", name);
+    printf("your name is %s", name);
+    return 0;
 }

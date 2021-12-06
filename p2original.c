@@ -3,7 +3,7 @@
 int input()
 {
   int a;
-  printf("enter two numbers\n");
+  printf("enter an numbers\n");
   scanf("%d",&a);
   return a;
 }
@@ -26,6 +26,6 @@ int main()
   h=add(n1,n2);
   output(n1, n2, h);
 }
-
+ 
 
 
