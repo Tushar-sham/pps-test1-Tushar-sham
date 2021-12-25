@@ -1,10 +1,9 @@
-#include <stdio.h>
-
-int main() 
+#include<stdio.h>
+int main()
 {
-    char a[20];
-    printf("enter ur name: \n");
-    scanf("%c", &a);
-    printf("ur name is %c\n", &a);
-    return 0;
+char name [8];
+printf("enter your name: ");
+scanf("%s", name);
+printf("your name is %s", name);
 }
+ 
