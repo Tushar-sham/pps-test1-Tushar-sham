@@ -1,4 +1,4 @@
-#include<stdio.h>
+1 #include<stdio.h>
 typedef struct _complex
 {
   float real;
@@ -31,7 +31,7 @@ complex add_n_complex(int n, complex c[n]){
 }
 void output(int n, complex c[n], complex result){
 if(n--){
-  printf("%0.2f + %0.2fi is % + %0.2fi\n", c[0].real, c[0].imaginary);
+  printf("%0.2f + %0.2fi is %0.2f + %0.2fi\n", c[0].real, c[0].imaginary);
 }else{
   for(int i=0; i<n-1; i++){
   printf("%0.2f + %0.2fi\n", c[i].real, c[i].imaginary);

@@ -11,9 +11,8 @@ float input()
   {
     if(n == 0 || n == 1)
     {
-      return n;
+    return n;
     }
-  
   float i = 1, ans = 1;
   while(ans <=n)
   {
@@ -34,3 +33,7 @@ void output(float n, float sqrt_result)
    output(n, sqrt_result);
    return 0;
  }
+
+
+
+

@@ -1,0 +1,103 @@
+gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x823: file p5original.c, line 27.
+(gdb) r
+Starting program: /home/runner/pps-test1-Tushar-sham-1/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p5original.c:27
+27    {
+(gdb) n
+29      input( &a , &b , &c );
+(gdb) 
+enter the first number: n
+30      cmp(a ,b ,c ,&large);
+(gdb) n
+31      output(large);
+(gdb) n
+enter the second number: enter the third number: the largest number is: 1721763344
+32      return 0;
+(gdb) n
+33    }(gdb) n
+__libc_start_main (main=0x563a66a0081b <main>, argc=1, 
+    argv=0x7ffed6e72b18, init=<optimized out>, fini=<optimized out>, 
+    rtld_fini=<optimized out>, stack_end=0x7ffed6e72b08)
+    at ../csu/libc-start.c:344
+344 ../csu/libc-start.c: No such file or directory.
+(gdb) n
+[Inferior 1 (process 609) exited normally]
+(gdb) s
+The program is not being run.
+(gdb) p
+The history is empty.
+(gdb) c
+The program is not being run.
+(gdb) l
+339 in ../csu/libc-start.c
+(gdb) quitgdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x823: file p5original.c, line 27.
+(gdb) r
+Starting program: /home/runner/pps-test1-Tushar-sham-1/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p5original.c:27
+27    {
+(gdb) n
+29      input( &a , &b , &c );
+(gdb) 
+enter the first number: n
+30      cmp(a ,b ,c ,&large);
+(gdb) n
+31      output(large);
+(gdb) n
+enter the second number: enter the third number: the largest number is: 1721763344
+32      return 0;
+(gdb) n
+33    }(gdb) n
+__libc_start_main (main=0x563a66a0081b <main>, argc=1, 
+    argv=0x7ffed6e72b18, init=<optimized out>, fini=<optimized out>, 
+    rtld_fini=<optimized out>, stack_end=0x7ffed6e72b08)
+    at ../csu/libc-start.c:344
+344 ../csu/libc-start.c: No such file or directory.
+(gdb) n
+[Inferior 1 (process 609) exited normally]
+(gdb) s
+The program is not being run.
+(gdb) p
+The history is empty.
+(gdb) c
+The program is not being run.
+(gdb) l
+339 in ../csu/libc-start.c
+(gdb) quit

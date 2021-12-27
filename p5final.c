@@ -10,7 +10,7 @@ void input(int *a,int *b,int *c){
 
 void cmp(int a,int b,int c,int *large){
   if(a>b){
-  if (a>c){
+  if (a>c)
     *large = a;
 }else{
   if(b>c){
@@ -21,7 +21,7 @@ void cmp(int a,int b,int c,int *large){
 }
   }
   void output(int large){
-    printf("the largest numvber is: %d\n", large);
+    printf("the largest number is: %d\n", large);
   }
   int main()
   {
@@ -31,4 +31,3 @@ void cmp(int a,int b,int c,int *large){
     output(large);
     return 0;
   }
-

@@ -12,20 +12,20 @@ int calculate (int m,int n,int p){if (m>n){
   }else{
     return p;
   }
-}else{
+ }else{
   if(n>p){
     return n;
-  }else{
+}else{
     return p;
   }
-}
+ }
 }
 
 void output(int large){
   printf("the largest element is: %d\n", large);
 }
 int main(){
-  int m,n,p,large;
+int m,n,p,large;
   m = input();
   n = input();
   p = input();
